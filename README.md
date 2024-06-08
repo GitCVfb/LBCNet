@@ -4,9 +4,9 @@ This repository contains the source code for the paper: [Learning Bilateral Cost
 
 Rolling shutter temporal super-resolution (RSSR), which aims to synthesize intermediate global shutter (GS) video frames between two consecutive rolling shutter (RS) frames, has made remarkable progress with the development of deep convolutional neural networks over the past years. Existing methods cascade multiple separated networks to sequentially estimate intermediate motion fields and synthesize target GS frames. Nevertheless, they are typically complex, do not facilitate the interaction of complementary motion and appearance information, and suffer from problems such as pixel aliasing or poor interpretation. In this paper, we derive the uniform bilateral motion fields for RS-aware backward warping, which endows our network a more explicit geometric meaning by injecting spatio-temporal consistency information through time-offset embedding. More importantly, we develop a unified, single-stage RSSR pipeline to recover the latent GS video in a coarse-to-fine manner. It first extracts pyramid features from given inputs, and then refines the bilateral motion fields together with the anchor frame until generating the desired output. With the help of our proposed bilateral cost volume, which uses the anchor frame as a common reference to model the correlation with two RS frames, the gradually refined anchor frames not only facilitate intermediate motion estimation, but also compensate for contextual details, making additional frame synthesis or refinement networks unnecessary. Meanwhile, an asymmetric bilateral motion model built on top of the symmetric bilateral motion model further improves the generality and adaptability, yielding better GS video reconstruction performance. Extensive quantitative and qualitative experiments on synthetic and real data demonstrate that our method achieves new state-of-the-art results.
 
-<img src="result_demo/network.png" width="78%"/>
+<img src="result_demo/network.png" width="86%"/>
 
-# <img src="result_demo/teaser.png" width="66%"/> 
+<img src="result_demo/teaser.png" width="96%"/> 
 
 ## Installation
 The code is tested with PyTorch 1.9.1 with CUDA 11.4.
